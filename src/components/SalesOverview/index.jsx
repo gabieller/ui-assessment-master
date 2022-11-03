@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { colors } from "../../globalStyles";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpload } from "@fortawesome/free-solid-svg-icons";
@@ -7,11 +8,10 @@ import PercentCard from "../PercentCard";
 import Tooltip from "../Tooltip";
 
 import * as S from "./style";
-import { colors } from "../../globalStyles";
 
 export const SalesOverview = ({ salesOverview }) => {
   return (
-    <S.Wrapper>
+    <S.Wrapper className="SalesOverview">
       <S.Info>
         <S.TooltipWrapper data-testid="tooltip">
           <Tooltip content="lorem ipsum"  />

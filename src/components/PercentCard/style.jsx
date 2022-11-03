@@ -7,18 +7,15 @@ export const Card = styled.div`
   align-items: flex-start;
   padding: 1rem;
   width: 25rem;
-
-
+  font-weight: 500;
 `;
 
 export const Percent = styled.span`
   font-size: ${fontSize.lg};
-  font-weight: 500;
   color: ${colors["green"]};
 `;
 
-export const Title = styled.div`
+export const Title = styled.span`
   text-transform: uppercase;
-  font-weight: 500;
   color: ${colors["grey-300"]};
 `;

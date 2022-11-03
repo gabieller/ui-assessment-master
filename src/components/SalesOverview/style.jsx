@@ -21,12 +21,12 @@ export const TooltipWrapper = styled.span`
   right: 1rem;
 `;
 
-export const Title = styled.div`
+export const Title = styled.h3`
   display: flex;
   flex-direction: row;
   align-items: center;
   font-weight: 500;
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.5rem 0; 
   gap: 0.5rem;
 `;
 export const SubTitle = styled.div`

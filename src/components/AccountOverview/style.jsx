@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors, devices, fontSize } from "../../globalStyles";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   margin-top: 3rem;
 `;
 
-export const Header = styled.div`
+export const Header = styled.header`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -24,22 +24,18 @@ export const Header = styled.div`
   max-width: 50rem;
 `;
 
-export const Title = styled.div`
-  gap: 5rem;
+export const Title = styled.h1`
   font-size: ${fontSize.lg};
+  font-weight: 400;
   color: ${colors["grey-500"]};
-
-
 `;
 
 export const ContactWrapper = styled.div`
   display: flex;
   flex-direction: row;
-
-
-
 `;
-export const CardWrapper = styled.div`
+
+export const CardWrapper = styled.section`
   display: flex;
   width: 100%;
   max-width: 50rem;

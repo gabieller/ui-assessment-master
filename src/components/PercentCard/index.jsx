@@ -6,7 +6,7 @@ import * as S from "./style";
 export const PercentCard = ({ title, total, partial }) => {
   const percent = Math.round((partial / total) * 100);
   return (
-    <S.Card>
+    <S.Card className="Percent">
       <S.Percent data-testid="percent">{percent}%</S.Percent>
       <S.Title data-testid="title">{title}</S.Title>
     </S.Card>

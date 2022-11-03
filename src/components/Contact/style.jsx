@@ -6,7 +6,7 @@ export const Contact = styled.div`
   flex-direction: column;
 `;
 
-export const Title = styled.div`
+export const Title = styled.span`
   display: flex;
   text-transform: uppercase;
   color: ${colors["grey-300"]};
@@ -62,7 +62,7 @@ export const LineInfo = styled.div`
   }
 `;
 
-export const Infos = styled.div`
+export const Infos = styled.span`
   display: flex;
   flex-direction: row;
   align-items: center;

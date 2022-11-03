@@ -17,7 +17,7 @@ const Contact = ({ name, email, phone }) => {
     return firstLetter + secondLetter;
   };
   return (
-    <S.Contact>
+    <S.Contact className="Contact">
       <S.Title>Your feefo support contact</S.Title>
       <S.InfoWrapper>
         <S.Initials data-testid="contact-initials">
