@@ -9,5 +9,4 @@ describe("Tooltip", () => {
     expect(content).not.toBeInTheDocument();
     expect(icon).toBeInTheDocument();
   });
-
 });
