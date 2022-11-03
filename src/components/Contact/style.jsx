@@ -6,12 +6,13 @@ export const Contact = styled.div`
   flex-direction: column;
 `;
 
-export const Title = styled.span`
+export const Title = styled.h3`
   display: flex;
   text-transform: uppercase;
   color: ${colors["grey-300"]};
   font-weight: 500;
   padding: 0.875rem 0;
+  margin: 0;
 
   @media ${devices.tablet} {
     padding: 0.5rem 0;

@@ -10,21 +10,24 @@ describe("Contact", () => {
         phone="020 3362 4208"
       />
     );
-    const name = screen.getByText(/Jane Doe/i);
-    const email = screen.getByText(/janedoe@feefo.com/i);
-    const phone = screen.getByText(/020 3362 4208/i);
     const title = screen.getByText(/Your feefo support contact/i);
-    expect(name).toBeInTheDocument();
-    expect(email).toBeInTheDocument();
-    expect(phone).toBeInTheDocument();
+    const name = screen.getByTestId("contact-name");
+    const email = screen.getByTestId("contact-email");
+    const phone = screen.getByTestId("contact-phone");
+    const initials = screen.getByTestId("contact-initials");
+
     expect(title).toBeInTheDocument();
+    expect(initials).toHaveTextContent("JD");
+    expect(name).toHaveTextContent("Jane Doe");
+    expect(email).toHaveTextContent("janedoe@feefo.com");
+    expect(phone).toHaveTextContent("020 3362 4208");
   });
 
   it("should render correctly initial letters when name has one word", () => {
     render(
       <Contact name="Jane" email="janedoe@feefo.com" phone="020 3362 4208" />
     );
-    const initialsElement = screen.getByTestId('contact-initials');
+    const initialsElement = screen.getByTestId("contact-initials");
     expect(initialsElement).toHaveTextContent("J");
   });
   it("should render correctly initial letters when name has two words", () => {
@@ -35,7 +38,7 @@ describe("Contact", () => {
         phone="020 3362 4208"
       />
     );
-    const initialsElement = screen.getByTestId('contact-initials');
+    const initialsElement = screen.getByTestId("contact-initials");
     expect(initialsElement).toHaveTextContent("JD");
   });
   it("should render correctly initial letters when name has three words", () => {
@@ -46,7 +49,7 @@ describe("Contact", () => {
         phone="020 3362 4208"
       />
     );
-    const initialsElement = screen.getByTestId('contact-initials');
+    const initialsElement = screen.getByTestId("contact-initials");
     expect(initialsElement).toHaveTextContent("JD");
   });
 });

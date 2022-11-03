@@ -12,7 +12,7 @@ describe("Contact", () => {
 
   it("should render correctly percent value", () => {
     render(<PercentCard title="Test" total={20} partial={4} />);
-    const percentElement = screen.getByTestId("percent");
+    const percentElement = screen.getByTestId("percent-value");
     expect(percentElement).toHaveTextContent("20%");
   });
 });

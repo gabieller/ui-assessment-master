@@ -13,20 +13,19 @@ const mockData = {
 
 describe("Sales Overview", () => {
   it("should render correctly", () => {
-    render(<SalesOverview salesOverview={mockData} />);
-    const tooltip = screen.getByTestId("tooltip");
-    const title = screen.getByText(/Sales/i);
+    render(<SalesOverview salesOverview={mockData.salesOverview} />);
+    const salesTitle = screen.getByText(/Sales/i);
     const subtitle = screen.getByTestId("subtitle");
-    const percent = screen.getByTestId("percent-card");
-    expect(tooltip).toBeInTheDocument();
-    expect(title).toBeInTheDocument();
-    expect(subtitle).toBeInTheDocument();
-    expect(percent).toBeInTheDocument();
-  });
+    const tooltip = screen.getByTestId("tooltip");
+    const percent = screen.getAllByTestId("percent-value");
+    const percentTitle = screen.getAllByTestId("percent-title");
 
-  // test.skip("should render icon", () => {
-  //   render(<SalesOverview title="Test" total={20} partial={4} />);
-  //   const percentElement = screen.getByTestId("percent");
-  //   expect(percentElement).toHaveTextContent("20%");
-  // });
+    expect(salesTitle).toBeInTheDocument();
+    expect(subtitle).toHaveTextContent("You had 8 uploads and 4 lines added");
+    expect(tooltip).toBeInTheDocument();
+    expect(percent[0]).toHaveTextContent("38%");
+    expect(percent[1]).toHaveTextContent("20%");
+    expect(percentTitle[0]).toHaveTextContent("upload success");
+    expect(percentTitle[1]).toHaveTextContent("lines added");
+  });
 });

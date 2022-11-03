@@ -24,13 +24,13 @@ const Contact = ({ name, email, phone }) => {
           {getContactInitials()}
         </S.Initials>
         <S.PersonalInfo>
-          <S.Name>{name}</S.Name>
+          <S.Name data-testid="contact-name">{name}</S.Name>
           <S.LineInfo>
-            <S.Infos>
-              <FontAwesomeIcon icon={faEnvelope} />
+            <S.Infos data-testid="contact-email">
+              <FontAwesomeIcon icon={faEnvelope} data-testid="icon-message" />
               {email}
             </S.Infos>
-            <S.Infos>{phone}</S.Infos>
+            <S.Infos data-testid="contact-phone">{phone}</S.Infos>
           </S.LineInfo>
         </S.PersonalInfo>
       </S.InfoWrapper>

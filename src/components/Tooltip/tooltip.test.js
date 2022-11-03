@@ -2,13 +2,12 @@ import { render, screen } from "@testing-library/react";
 import Tooltip from "./";
 
 describe("Tooltip", () => {
-  test.skip("should render correctly", () => {
-    render(<Tooltip title="Test" total={20} partial={5} />);
-    const title = screen.getByText(/Test/i);
-    const percent = screen.getByText(/25%/i);
-    expect(title).toBeInTheDocument();
-    expect(percent).toBeInTheDocument();
+  it("should render correctly", () => {
+    render(<Tooltip content="Test tooltip content" />);
+    const content = screen.queryByText(/Test tooltip content/i);
+    const icon = screen.getByTestId("icon");
+    expect(content).not.toBeInTheDocument();
+    expect(icon).toBeInTheDocument();
   });
-
 
 });

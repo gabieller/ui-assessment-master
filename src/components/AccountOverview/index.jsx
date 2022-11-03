@@ -9,12 +9,12 @@ import * as S from "./style";
 
 export const AccountOverview = ({ data }) => {
   return (
-      <S.Wrapper className="AccountOverview">
+      <S.Wrapper className="AccountOverview" role="main">
         <S.Header>
           <S.Title  data-testid="title">
             Account Overview
           </S.Title>
-          <S.ContactWrapper data-testid="contact" >
+          <S.ContactWrapper>
             <Contact
               name={data.supportContact.name}
               email={data.supportContact.email}
@@ -22,7 +22,7 @@ export const AccountOverview = ({ data }) => {
             />
           </S.ContactWrapper>
         </S.Header>
-        <S.CardWrapper data-testid="card-sales">
+        <S.CardWrapper>
           <SalesOverview salesOverview={data.salesOverview} />
         </S.CardWrapper>
       </S.Wrapper>

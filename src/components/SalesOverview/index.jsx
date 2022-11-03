@@ -11,10 +11,13 @@ import * as S from "./style";
 
 export const SalesOverview = ({ salesOverview }) => {
   return (
-    <S.Wrapper className="SalesOverview">
+    <S.Wrapper
+      className="SalesOverview"
+      role="grid"
+    >
       <S.Info>
         <S.TooltipWrapper data-testid="tooltip">
-          <Tooltip content="lorem ipsum"  />
+          <Tooltip content="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
         </S.TooltipWrapper>
         <S.Title data-testid="title">
           <FontAwesomeIcon icon={faUpload} size="sm" color={colors["blue"]} />
@@ -28,7 +31,7 @@ export const SalesOverview = ({ salesOverview }) => {
         </S.SubTitle>
       </S.Info>
 
-      <S.PercentCardWrapper data-testid="percent-card">
+      <S.PercentCardWrapper>
         <PercentCard
           total={salesOverview.uploads}
           partial={salesOverview.successfulUploads}
