@@ -19,10 +19,7 @@ const Contact = ({ name, email, phone }) => {
     <S.Contact className="Contact">
       <S.Title tabIndex={3}>Your feefo support contact</S.Title>
       <S.InfoWrapper>
-        <S.Initials
-          data-testid="contact-initials"
-          tabIndex={5}
-        >
+        <S.Initials data-testid="contact-initials" tabIndex={5}>
           {getContactInitials()}
         </S.Initials>
         <S.PersonalInfo>
@@ -30,10 +27,7 @@ const Contact = ({ name, email, phone }) => {
             {name}
           </S.Name>
           <S.LineInfo>
-            <S.Infos
-              data-testid="contact-email"
-              tabIndex={6}
-            >
+            <S.Infos data-testid="contact-email" tabIndex={6}>
               <FontAwesomeIcon icon={faEnvelope} data-testid="icon-message" />
               {email}
             </S.Infos>

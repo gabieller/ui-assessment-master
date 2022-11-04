@@ -39,8 +39,8 @@ describe("AccountOverview", () => {
     const subtitle = screen.getByTestId("subtitle");
     const tooltip = screen.getByTestId("tooltip");
     const percent = screen.getAllByTestId("percent-value");
-    const percentTitle  = screen.getAllByTestId("percent-title");
-    
+    const percentTitle = screen.getAllByTestId("percent-title");
+
     expect(salesTitle).toBeInTheDocument();
     expect(subtitle).toHaveTextContent("You had 8 uploads and 4 lines added");
     expect(tooltip).toBeInTheDocument();
@@ -48,6 +48,5 @@ describe("AccountOverview", () => {
     expect(percent[1]).toHaveTextContent("20%");
     expect(percentTitle[0]).toHaveTextContent("upload success");
     expect(percentTitle[1]).toHaveTextContent("lines added");
-
   });
 });

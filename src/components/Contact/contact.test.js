@@ -30,6 +30,7 @@ describe("Contact", () => {
     const initialsElement = screen.getByTestId("contact-initials");
     expect(initialsElement).toHaveTextContent("J");
   });
+
   it("should render correctly initial letters when name has two words", () => {
     render(
       <Contact
@@ -41,6 +42,7 @@ describe("Contact", () => {
     const initialsElement = screen.getByTestId("contact-initials");
     expect(initialsElement).toHaveTextContent("JD");
   });
+
   it("should render correctly initial letters when name has three words", () => {
     render(
       <Contact

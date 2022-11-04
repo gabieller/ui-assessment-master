@@ -26,9 +26,10 @@ export const Title = styled.h3`
   flex-direction: row;
   align-items: center;
   font-weight: 500;
-  margin: 0 0 1.5rem 0; 
+  margin: 0 0 1.5rem 0;
   gap: 0.5rem;
 `;
+
 export const SubTitle = styled.div`
   display: flex;
   color: ${colors["grey-500"]};
@@ -43,4 +44,3 @@ export const PercentCardWrapper = styled.div`
     border-right: 1px solid #00000020;
   }
 `;
-

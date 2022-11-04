@@ -17,7 +17,12 @@ export const SalesOverview = ({ salesOverview }) => {
           <Tooltip content="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
         </S.TooltipWrapper>
         <S.Title data-testid="title" tabIndex={8}>
-          <FontAwesomeIcon icon={faUpload} size="sm" color={colors["blue"]} aria-labelledby="sales"/>
+          <FontAwesomeIcon
+            icon={faUpload}
+            size="sm"
+            color={colors["blue"]}
+            aria-labelledby="sales"
+          />
           Sales
         </S.Title>
         <S.SubTitle data-testid="subtitle" tabIndex={9}>
