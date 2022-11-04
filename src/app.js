@@ -19,7 +19,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" tabIndex={0}>
       <AccountOverview data={accountOverviewStub} />
     </div>
   );

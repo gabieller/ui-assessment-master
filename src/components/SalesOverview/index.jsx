@@ -11,19 +11,16 @@ import * as S from "./style";
 
 export const SalesOverview = ({ salesOverview }) => {
   return (
-    <S.Wrapper
-      className="SalesOverview"
-      role="grid"
-    >
+    <S.Wrapper className="SalesOverview">
       <S.Info>
         <S.TooltipWrapper data-testid="tooltip">
           <Tooltip content="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
         </S.TooltipWrapper>
-        <S.Title data-testid="title">
-          <FontAwesomeIcon icon={faUpload} size="sm" color={colors["blue"]} />
+        <S.Title data-testid="title" tabIndex={8}>
+          <FontAwesomeIcon icon={faUpload} size="sm" color={colors["blue"]} aria-labelledby="sales"/>
           Sales
         </S.Title>
-        <S.SubTitle data-testid="subtitle">
+        <S.SubTitle data-testid="subtitle" tabIndex={9}>
           <span>
             You had <strong> {salesOverview.uploads}</strong> uploads and
             <strong> {salesOverview.linesSaved} </strong> lines added
@@ -49,10 +46,10 @@ export const SalesOverview = ({ salesOverview }) => {
 
 SalesOverview.propTypes = {
   salesOverview: PropTypes.shape({
-    uploads: PropTypes.number,
-    successfulUploads: PropTypes.number,
-    linesAttempted: PropTypes.number,
-    linesSaved: PropTypes.number,
+    uploads: PropTypes.number.isRequired,
+    successfulUploads: PropTypes.number.isRequired,
+    linesAttempted: PropTypes.number.isRequired,
+    linesSaved: PropTypes.number.isRequired,
     lastUploadDate: PropTypes.number,
   }),
 };

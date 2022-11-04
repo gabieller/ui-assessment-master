@@ -9,12 +9,14 @@ import * as S from "./style";
 
 export const AccountOverview = ({ data }) => {
   return (
-      <S.Wrapper className="AccountOverview" role="main">
+
+      <S.Wrapper className="AccountOverview" role="main" >
         <S.Header>
-          <S.Title  data-testid="title">
+          <S.Title  data-testid="title" tabIndex={1}>
             Account Overview
           </S.Title>
-          <S.ContactWrapper>
+
+          <S.ContactWrapper tabIndex={2} >
             <Contact
               name={data.supportContact.name}
               email={data.supportContact.email}
@@ -22,7 +24,7 @@ export const AccountOverview = ({ data }) => {
             />
           </S.ContactWrapper>
         </S.Header>
-        <S.CardWrapper>
+        <S.CardWrapper >
           <SalesOverview salesOverview={data.salesOverview} />
         </S.CardWrapper>
       </S.Wrapper>
@@ -30,7 +32,7 @@ export const AccountOverview = ({ data }) => {
 };
 
 AccountOverview.propTypes = {
-  data: PropTypes.object
+  data: PropTypes.object.isRequired
 };
 
 export default AccountOverview;

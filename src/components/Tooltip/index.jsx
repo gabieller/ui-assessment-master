@@ -9,9 +9,13 @@ import * as S from "./style";
 
 export const Tooltip = ({ content }) => {
   return (
-    <S.TooltipComponent role="tooltip" aria-label={content}  data-testid="tooltip-component">
+    <S.TooltipComponent
+      role="tooltip"
+      aria-label={content}
+      data-testid="tooltip-component"
+    >
       <FontAwesomeIcon
-        data-testid="icon"
+        data-testid="tooltip-icon"
         icon={faInfoCircle}
         color={colors["grey-300"]}
         size="1x"
@@ -21,7 +25,7 @@ export const Tooltip = ({ content }) => {
 };
 
 Tooltip.propTypes = {
-  content: PropTypes.string,
+  content: PropTypes.string.isRequired,
 };
 
 export default Tooltip;
